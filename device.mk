@@ -34,6 +34,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/mot_ov5695_l5695fa0_chromatix.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/camera/mot_ov5695_l5695fa0_chromatix.xml \
     $(LOCAL_PATH)/configs/camera/s5k4h8_chromatix.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/camera/s5k4h8_chromatix.xml
 
+PRODUCT_PACKAGES += \
+    libshim_camera_hal \
+    libshims_camera
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service_32 \
