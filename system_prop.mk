@@ -11,6 +11,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=0 \
     persist.camera.eis.enable=0
 
+# Fingerprint
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.qfp=false
+
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.ims.volte=true \
