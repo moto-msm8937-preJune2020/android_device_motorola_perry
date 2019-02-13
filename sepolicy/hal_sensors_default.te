@@ -1,0 +1,2 @@
+allow hal_sensors_default sysfs:dir { open read write };
+allow hal_sensors_default persist_file:file { read open };
