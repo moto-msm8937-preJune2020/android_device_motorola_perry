@@ -26,6 +26,9 @@ DEVICE_PATH := device/motorola/montana
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := montana,montana_retail
 
+# Board
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
