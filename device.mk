@@ -56,6 +56,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-brcm.conf:system/vendor/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:system/vendor/etc/libnfc-nxp.conf
 
+# Power
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/perfboostsconfig.xml:system/vendor/etc/perf/perfboostsconfig.xml
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
