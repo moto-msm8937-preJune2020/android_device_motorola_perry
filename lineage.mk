@@ -14,35 +14,42 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-# Inherit from those products. Most specific first.
+# Inherit from the common Open Source configuration.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from montana device
 $(call inherit-product, device/motorola/montana/device.mk)
+$(call inherit-product, vendor/motorola/montana/montana-vendor.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit from the common LineageOS configuration.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    framework-res
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := montana
 PRODUCT_NAME := lineage_montana
 PRODUCT_BRAND := motorola
+PRODUCT_DEVICE := montana
+PRODUCT_MODEL := Moto G5S
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_MODEL := Moto G5s
 
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
+TARGET_VENDOR_PRODUCT_NAME := montana_retail
+TARGET_VENDOR_DEVICE_NAME := montana
+TARGET_VENDOR := motorola
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="Moto G5s"
+    PRIVATE_BUILD_DESC="montana_retail-user 8.1.0 OPPS28.65-37-7-4 1dd5 release-keys"
 
-# for specific
-$(call inherit-product, vendor/motorola/montana/montana-vendor.mk)
+BUILD_FINGERPRINT := motorola/montana_retail/montana:8.1.0/OPPS28.65-37-7-4/1dd5:user/release-keys
