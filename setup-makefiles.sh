@@ -17,10 +17,10 @@
 
 set -e
 
-DEVICE=montana
-DEVICE_COMMON=msm8937-common
-VENDOR=motorola
+export DEVICE=montana
+export DEVICE_COMMON=msm8937-common
+export VENDOR=motorola
 
-INITIAL_COPYRIGHT_YEAR=2018
+export DEVICE_BRINGUP_YEAR=2018
 
 ./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
