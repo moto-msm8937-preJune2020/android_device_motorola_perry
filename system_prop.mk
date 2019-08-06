@@ -2,10 +2,6 @@
 # system.prop for montana
 #
 
-# Updater
-PRODUCT_PROPERTY_OVERRIDES += \
-    lineage.updater.uri=https://raw.githubusercontent.com/montanadevelopment/releases/master/lineage15.1.json
-
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=0 \
