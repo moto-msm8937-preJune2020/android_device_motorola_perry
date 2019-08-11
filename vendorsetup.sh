@@ -1,1 +1,1 @@
-add_lunch_combo omni_perry-userdebug
+add_lunch_combo omni_perry-eng
