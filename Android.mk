@@ -171,7 +171,6 @@ $(VENUS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 ALL_DEFAULT_INSTALLED_MODULES += $(VENUS_SYMLINKS)
 
 include device/motorola/montana/tftp.mk
-include device/motorola/montana/expat.mk
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
