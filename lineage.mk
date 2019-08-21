@@ -43,10 +43,6 @@ PRODUCT_DEVICE := montana
 PRODUCT_MODEL := Moto G5S
 PRODUCT_MANUFACTURER := motorola
 
-TARGET_VENDOR_PRODUCT_NAME := montana_retail
-TARGET_VENDOR_DEVICE_NAME := montana
-TARGET_VENDOR := motorola
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="montana_retail-user 8.1.0 OPPS28.65-37-7-4 1dd5 release-keys"
 
