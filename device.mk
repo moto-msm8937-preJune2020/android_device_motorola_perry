@@ -36,7 +36,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libshim_camera_hal \
-    libshims_camera
+    libshims_camera \
+    camera.msm8937
 
 # Fingerprint
 PRODUCT_PACKAGES += \
