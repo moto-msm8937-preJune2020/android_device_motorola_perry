@@ -19,7 +19,7 @@
 $(call inherit-product, device/motorola/msm8937-common/msm8937.mk)
 
 # Properties
-$(call inherit-product, device/motorola/montana/system_prop.mk)
+$(call inherit-product, device/motorola/perry/system_prop.mk)
 
 # Audio
 PRODUCT_COPY_FILES +=  \
@@ -29,38 +29,19 @@ PRODUCT_COPY_FILES +=  \
 
 # Camera
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/camera/msm8937_mot_montana_camera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/camera/msm8937_mot_montana_camera.xml \
-    $(LOCAL_PATH)/configs/camera/mot_ov5695_l5695f60_chromatix.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/camera/mot_ov5695_l5695f60_chromatix.xml \
-    $(LOCAL_PATH)/configs/camera/s5k3p3_chromatix.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/camera/s5k3p3_chromatix.xml
+    $(LOCAL_PATH)/configs/camera/imx219_chromatix.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/camera/imx219_chromatix.xml \
+    $(LOCAL_PATH)/configs/camera/msm8917_mot_perry_camera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/camera/msm8917_mot_perry_camera.xml \
+    $(LOCAL_PATH)/configs/camera/mot_ov5695_l5695fa0_chromatix.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/camera/mot_ov5695_l5695fa0_chromatix.xml \
+    $(LOCAL_PATH)/configs/camera/s5k4h8_chromatix.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/camera/s5k4h8_chromatix.xml
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1
+    android.hardware.biometrics.fingerprint@2.1-service_32 \
+    fingerprint.msm8937
 
 # LineageActions
 PRODUCT_PACKAGES += \
     LineageActions
-
-# NFC
-PRODUCT_PACKAGES += \
-    libnfc \
-    libnfc_jni \
-    nfc_nci.msm8937 \
-    NfcNci \
-    Tag \
-    com.android.nfc_extras \
-    android.hardware.nfc@1.0-impl
-
-PRODUCT_COPY_FILES += \
-    frameworks/base/nfc-extras/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.android.nfc_extras.xml
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
-
-# Power
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -78,4 +59,4 @@ PRODUCT_COPY_FILES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine-montana.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
+    $(LOCAL_PATH)/configs/thermal-engine-perry.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf

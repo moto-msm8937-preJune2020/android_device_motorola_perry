@@ -21,13 +21,10 @@ include device/motorola/msm8937-common/BoardConfigCommon.mk
 # Inherit from the proprietary version
 -include vendor/motorola/montana/BoardConfigVendor.mk
 
-DEVICE_PATH := device/motorola/montana
+DEVICE_PATH := device/motorola/perry
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := montana,montana_retail
-
-# Board
-TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+TARGET_OTA_ASSERT_DEVICE := perry,perry_retail
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -35,23 +32,16 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 # Kernel
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_LZ4C_DT := true
-TARGET_KERNEL_CONFIG := montana_defconfig
-
-# NFC
-NXP_CHIP_TYPE := pn544
-BOARD_NFC_HAL_SUFFIX := $(TARGET_BOARD_PLATFORM)
+TARGET_KERNEL_CONFIG := perry_defconfig
 
 # Partitions
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16879616    #    16484 * 1024 mmcblk0p38
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456      #   262144 * 1024 mmcblk0p52
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3623878656    #  3538944 * 1024 mmcblk0p53
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 26403126272 # 25784303 * 1024 mmcblk0p54
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 10768858112 # 10516463 * 1024 mmcblk0p54
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
-
-# Vendor security patch
-VENDOR_SECURITY_PATCH := 2019-08-01

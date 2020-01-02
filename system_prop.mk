@@ -1,5 +1,5 @@
 #
-# system.prop for montana
+# system.prop for perry
 #
 
 # Camera
@@ -22,4 +22,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.sensors=montana
+    ro.hardware.sensors=perry

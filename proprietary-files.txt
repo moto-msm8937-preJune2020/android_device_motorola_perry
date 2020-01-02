@@ -1,4 +1,4 @@
-# Proprietary files for montana
+# Proprietary files for perry
 
 # Audio - ACDB
 vendor/etc/acdbdata/Bluetooth_cal.acdb

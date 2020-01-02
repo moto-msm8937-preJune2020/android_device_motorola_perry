@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifneq ($(filter montana,$(TARGET_DEVICE)),)
+ifneq ($(filter perry,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 
@@ -81,19 +81,6 @@ $(GPTEST_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(GPTEST_SYMLINKS)
 
-ISDB_IMAGES := \
-    isdbtmm.b00 isdbtmm.b01 isdbtmm.b02 isdbtmm.b03 isdbtmm.b04 isdbtmm.b05 \
-    isdbtmm.b06 isdbtmm.mdt
-
-ISDB_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(ISDB_IMAGES)))
-$(ISDB_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "ISDB firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(ISDB_SYMLINKS)
-
 MBA_IMAGES := mba.mbn
 
 MBA_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(MBA_IMAGES)))
@@ -144,19 +131,17 @@ $(SECUREMM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(SECUREMM_SYMLINKS)
 
-SAMPLE_IMAGES := \
-    smplap32.b00 smplap32.b01 smplap32.b02 smplap32.b03 smplap32.b04 smplap32.b05 smplap32.b06 \
-    smplap32.mdt smplap64.b00 smplap64.b01 smplap64.b02 smplap64.b03 smplap64.b04 smplap64.b05 \
-    smplap64.b06 smplap64.mdt
+TBASE_IMAGES := \
+    tbase.b00 tbase.b01 tbase.b02 tbase.b03 tbase.b04 tbase.b05 tbase.b06 tbase.mdt \
 
-SAMPLE_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(SAMPLE_IMAGES)))
-$(SAMPLE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "SAMPLE firmware link: $@"
+TBASE_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(TBASE_IMAGES)))
+$(TBASE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "TBASE firmware link: $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(SAMPLE_SYMLINKS)
+ALL_DEFAULT_INSTALLED_MODULES += $(TBASE_SYMLINKS)
 
 VENUS_IMAGES := \
     venus.b00 venus.b01 venus.b02 venus.b03 venus.b04 venus.mdt
