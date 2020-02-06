@@ -19,7 +19,7 @@
 include device/motorola/msm8937-common/BoardConfigCommon.mk
 
 # Inherit from the proprietary version
--include vendor/motorola/montana/BoardConfigVendor.mk
+-include vendor/motorola/perry/BoardConfigVendor.mk
 
 DEVICE_PATH := device/motorola/perry
 
