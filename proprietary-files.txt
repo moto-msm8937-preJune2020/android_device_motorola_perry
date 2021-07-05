@@ -519,8 +519,8 @@ etc/firmware/opalum.tx.ext.config.2
 etc/firmware/opalum.tx.ext.config.3
 
 # Touchscreen firmware
-etc/firmware/synaptics-inx-s3603r-17042001-27111d-montana.tdat
-etc/firmware/synaptics-tianma-s3603r-17041102-27111d-montana.tdat
+etc/firmware/synaptics-inx-s3603r-17042001-27111d-perry.tdat
+etc/firmware/synaptics-tianma-s3603r-17041102-27111d-perry.tdat
 
 # Sensors
 framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
